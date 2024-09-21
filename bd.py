@@ -1,6 +1,7 @@
 import numpy as np 
 
 
+# Base de dados que vai ser usada para Calcular a qualidade do celular
 
 ram = np.array([[2, 1], [4, 2], [6, 3], [8, 4], [10 , 5]])
 

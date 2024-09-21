@@ -3,6 +3,7 @@ from bd import *
 celular = {"ram" : 8, "armazenamento" : 256, "camera" : 60, "bateria" : 4575 }
 
 
+# Função que vai verifivar a qualidade dos componentes do celular
 def prev_cell(prod):
     pRam = prod["ram"]
     pArm = prod["armazenamento"]
@@ -60,4 +61,5 @@ print(f"Celular Ram: {celular['ram']}GB\nAvalição: {analize[0]}\n")
 print(f"Celular Armazenamento: {celular['armazenamento']}GB\nAvalição: {analize[1]}\n")
 print(f"Celular Câmera: {celular['camera']}MP\nAvalição: {analize[2]}\n")
 print(f"Celular Bateria: {celular['bateria']}mAh\nAvalição: {analize[3]}\n")
+
 
