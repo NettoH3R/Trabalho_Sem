@@ -77,23 +77,23 @@ def verificarQualit(cell):
     result = (sum(fb)*2)/len(fb)
 
     if result >= 8:
-        print("\n\n\n"+"~"*40)
+        print("\n\n\n"+f"{Fore.GREEN}~"*40)
         print(f"Taxa de aprovação do aparelho: {round(result*10,0)}%")
         print("~"*40)
-        print("\n\n\n")
+        print(f"{Fore.WHITE}{Style.NORMAL}\n\n")
         print(f"O Celular é excelente:\n")
 
     elif 8 > result > 5:
-        print("\n\n\n" + f"{Fore.YELLOW}~"*40)
+        print("\n\n\n" + f"{Fore.YELLOW}{Style.BRIGHT}~"*40)
         print(f"Taxa de aprovação do aparelho: {round(result*10,0)}%")
         print(f"~"*40)
-        print(f"{Fore.WHITE}\n\n")
+        print(f"{Fore.WHITE}{Style.NORMAL}\n\n")
         print(f"O Celular é bom, mas pode ser melhorado:\n")
     else:
-        print("\n\n\n"+"~"*40)
+        print("\n\n\n"+f"{Fore.RED}{Style.BRIGHT}~"*40)
         print(f"Taxa de aprovação do aparelho: {round(result*10,0)}%")
         print("~"*40)
-        print("\n\n\n")
+        print(f"{Fore.WHITE}{Style.NORMAL}\n\n")
         print(f"O Celular é obsoleto, tem que ser melhorado:\n")
 
     for i in range(0,len(fb)):
@@ -114,4 +114,5 @@ def verificarQualit(cell):
                 print("--"*40)
                 print(f"O armazenamento pode ser melhorado: Uma bateria de {cell["bateria"]}mAh durará pouco tempo")
                 print("--"*40)
-        print("\n\n\n")
+    
+    print("\n\n\n")

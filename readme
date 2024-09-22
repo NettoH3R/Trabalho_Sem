@@ -1,0 +1,6 @@
+Antes de usar a aplicação digitar no terminal:
+
+pip install numpy
+pip install colorama
+
+
