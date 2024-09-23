@@ -15,7 +15,7 @@ def main():
         celular = {"ram" : 0, "armazenamento" : 0, "camera" : 0, "bateria" : 0 }
     
     while True:
-        cArm = int(input("Qual é o valor de ram que o celular terá: "))
+        cArm = int(input("Qual é o valor de armazenamento que o celular terá: "))
         if cArm >= 64:
             celular['armazenamento'] = cArm
             break
