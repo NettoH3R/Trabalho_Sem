@@ -65,10 +65,11 @@ def config(prod):
 def showConfigs(cell):
     analise = config(cell)
 
-    print(f"Celular Ram: {cell['ram']}GB\nAvalição: {analise[0]}\n")
-    print(f"Celular Armazenamento: {cell['armazenamento']}GB\nAvalição: {analise[1]}\n")
-    print(f"Celular Câmera: {cell['camera']}MP\nAvalição: {analise[2]}\n")
-    print(f"Celular Bateria: {cell['bateria']}mAh\nAvalição: {analise[3]}\n")
+    print(f"~"*15 + f"{Style.BRIGHT}CONFIGURAÇÕES{Style.NORMAL}" + "~"*15)
+    print(f"Celular Ram: {cell['ram']}GB | Avalição: {analise[0]}\n")
+    print(f"Celular Armazenamento: {cell['armazenamento']}GB | Avalição: {analise[1]}\n")
+    print(f"Celular Câmera: {cell['camera']}MP | Avalição: {analise[2]}\n")
+    print(f"Celular Bateria: {cell['bateria']}mAh | Avalição: {analise[3]}\n")
 
 def verificarQualit(cell):
 
@@ -81,20 +82,20 @@ def verificarQualit(cell):
         print(f"Taxa de aprovação do aparelho: {round(result*10,0)}%")
         print("~"*40)
         print(f"{Fore.WHITE}{Style.NORMAL}\n\n")
-        print(f"O Celular é excelente:\n")
+        print(f"O Celular é excelente!\n")
 
     elif 8 > result > 5:
         print("\n\n\n" + f"{Fore.YELLOW}{Style.BRIGHT}~"*40)
         print(f"Taxa de aprovação do aparelho: {round(result*10,0)}%")
         print(f"~"*40)
         print(f"{Fore.WHITE}{Style.NORMAL}\n\n")
-        print(f"O Celular é bom, mas pode ser melhorado:\n")
+        print(f"O Celular é bom, mas pode ser melhorado.\n")
     else:
         print("\n\n\n"+f"{Fore.RED}{Style.BRIGHT}~"*40)
         print(f"Taxa de aprovação do aparelho: {round(result*10,0)}%")
         print("~"*40)
         print(f"{Fore.WHITE}{Style.NORMAL}\n\n")
-        print(f"O Celular é obsoleto, tem que ser melhorado:\n")
+        print(f"O Celular é obsoleto, tem que ser melhorado!\n")
 
     for i in range(0,len(fb)):
         if fb[i] < 3:
@@ -115,4 +116,19 @@ def verificarQualit(cell):
                 print(f"O armazenamento pode ser melhorado: Uma bateria de {cell["bateria"]}mAh durará pouco tempo")
                 print("--"*40)
     
-    print("\n\n\n")
+    print("\n\n")
+
+
+def calcValor(cell):
+    valores = (200, 200, 50 ,100)
+
+    fb = config(cell)
+    result = 0
+
+    for i in range(0,len(valores)):
+        result = result + fb[i]*valores[i]
+
+
+    print(f"O valor atual do aparelho é entorno de: {Fore.GREEN}R${result}.00{Fore.WHITE}")
+    print("\n\n")
+    
