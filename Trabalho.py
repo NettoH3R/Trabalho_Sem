@@ -32,7 +32,7 @@ def main():
             print(f"Valor inválido! O valor mínimo é 24MP")
 
     while True:
-        cBat = int(input("Qual é o valor da câmera que a bateria terá: "))
+        cBat = int(input("Qual é o valor da bateria que o celular terá: "))
         if cBat >= 3000:
             celular['bateria'] = cBat
             break
@@ -43,4 +43,8 @@ def main():
     calcValor(celular)
     showConfigs(celular)
 
-main()
+try:
+    main()
+
+except:
+    print("Valor inválido digitado!")
